@@ -1,4 +1,4 @@
-define(["Crafty"], function(Crafty) {
+define(["Crafty", "Entities/LevelOverMenu"], function(Crafty) {
     Crafty.c("Goal", {
         _width: 50,
         _height: 50,
@@ -11,14 +11,15 @@ define(["Crafty"], function(Crafty) {
                 .gravity("Floor")
                 .collision()
                 .onHit("Player", function() {
-                    Crafty.e("2D, DOM, Color, Text")
-                        .attr({x: 350, y: 225,})
-                        .text("Winner")
-                        .textColor(this._goalColor, 1)
-                        .textFont({
-                            size: '48px',
-                            weight: 'bold'
-                        });
+//                    Crafty.e("2D, DOM, Color, Text")
+//                        .attr({x: 350, y: 225,})
+//                        .text("Winner")
+//                        .textColor(this._goalColor, 1)
+//                        .textFont({
+//                            size: '48px',
+//                            weight: 'bold'
+//                        });
+                    Crafty.e("LevelOverMenu");
                 });
             
             return this;
