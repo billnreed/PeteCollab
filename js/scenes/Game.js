@@ -5,9 +5,6 @@ define(["Crafty", "Spawners/PlatformSpawner", "Entities/Player", "Entities/Bulle
         Crafty.e("PlatformSpawner")
             .platformSpawner();
         
-        Crafty.e("Bullet")
-            .bullet(100, 100, "right", 3);
-        
         Crafty.e("Player").player();
     });
 });
