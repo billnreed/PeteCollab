@@ -1,4 +1,4 @@
-define(["crafty", "components/moves-straight", "components/platform", "spawners/platform-spawner"], function() {
+define(["crafty", "spawners/platform-spawner"], function() {
     Crafty.scene("Game", function() {
         Crafty.background("#73a6e2");
         
@@ -7,7 +7,7 @@ define(["crafty", "components/moves-straight", "components/platform", "spawners/
 
             
         Crafty.e("2D, Canvas, Color, Gravity, Twoway")
-            .attr({x: 200, y: 200, w: 100, h: 100})
+            .attr({x: 200, y: 60, w: 40, h: 40})
             .color("#52e852")
             .twoway(3, 6)
             .gravity("Platform");
