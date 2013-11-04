@@ -1,4 +1,4 @@
-define(["crafty", "components/platform"], function() {
+define(["crafty", "Components/Platform"], function() {
     Crafty.c("PlatformSpawner", {
         _interval: 1000,
         _yRange: {from: 0, to: 700},

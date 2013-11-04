@@ -1,4 +1,4 @@
-define(["crafty", "spawners/platform-spawner"], function() {
+define(["crafty", "Spawners/PlatformSpawner"], function() {
     Crafty.scene("Game", function() {
         Crafty.background("#73a6e2");
         

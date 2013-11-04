@@ -1,4 +1,4 @@
-define(["crafty", "components/moves-straight"], function(Crafty) {
+define(["crafty", "Components/MovesStraight"], function(Crafty) {
     describe("A MovesStraight component", function() {
         describe("moving right", function() {
             var ms;

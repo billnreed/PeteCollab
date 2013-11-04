@@ -14,14 +14,14 @@
             require.config({
                 paths: {
                     crafty: "../js/libs/crafty",
-                    components: "../js/components", 
-                    scenes: "../js/scenes"
+                    Components: "../js/Components", 
+                    Scenes: "../js/Scenes"
                 }
             }); 
             
             STAGE_BOUNDS = {x: 0, y: 0, w: 450, h: 700};
  
-            require(["components-spec/moves-straight-spec", "components-spec/destroy-offstage-spec"], function() {
+            require(["ComponentsSpec/MovesStraightSpec", "ComponentsSpec/DestroyOffstageSpec"], function() {
                 jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
                     
                 jasmine.getEnv().execute();
