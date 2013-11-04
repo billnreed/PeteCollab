@@ -11,15 +11,8 @@ define(["Crafty", "Entities/LevelOverMenu"], function(Crafty) {
                 .gravity("Floor")
                 .collision()
                 .onHit("Player", function() {
-//                    Crafty.e("2D, DOM, Color, Text")
-//                        .attr({x: 350, y: 225,})
-//                        .text("Winner")
-//                        .textColor(this._goalColor, 1)
-//                        .textFont({
-//                            size: '48px',
-//                            weight: 'bold'
-//                        });
-                    Crafty.e("LevelOverMenu");
+                    Crafty.e("LevelOverMenu")
+                        .levelOverMenu(1000, 200);
                 });
             
             return this;

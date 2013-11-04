@@ -12,13 +12,15 @@ define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal"], functio
             .attr({x: 0, y:400, w: 50, h:50});
         
         Crafty.e("Floor")
-            .floor(0, 400, 700, 20);
+            .floor(0, 200, 700, 20);
+        Crafty.e("Floor")
+            .floor(800, 400, 600, 20);
         
         var player = Crafty.e("Player")
             .player(100, 0);
         
         Crafty.e("Goal")
-            .goal(550, 0);
+            .goal(1300, 0);
         
         Crafty.viewport.follow(player);
     });
