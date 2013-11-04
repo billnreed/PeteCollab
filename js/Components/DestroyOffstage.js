@@ -1,4 +1,4 @@
-define(["crafty"], function(Crafty) {
+define(["Crafty"], function(Crafty) {
     Crafty.c("DestroyOffstage", {
         _hasBeenOnStage: false,
         

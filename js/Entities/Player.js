@@ -1,4 +1,4 @@
-define(["crafty"], function(Crafty) {
+define(["Crafty"], function(Crafty) {
     Crafty.c("Player", {
         player: function() {
             this.requires("2D, Canvas, Color, Gravity, Twoway, Keyboard")

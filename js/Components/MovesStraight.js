@@ -1,0 +1,3 @@
+define(["Crafty"], function(Crafty) {
+    ;
+});

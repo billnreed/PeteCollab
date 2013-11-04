@@ -1,4 +1,4 @@
-define(["crafty", "Components/MovesStraightAtTarget", "Components/DestroyOffstage"], function(Crafty) {
+define(["Crafty", "Components/MovesStraightAtTarget", "Components/DestroyOffstage"], function(Crafty) {
     Crafty.c("Platform", {
         _initialX: 0,
         _initialY: 0,

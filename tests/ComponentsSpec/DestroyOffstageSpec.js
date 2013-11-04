@@ -1,4 +1,4 @@
-define(["crafty", "Components/DestroyOffstage"], function(Crafty) {
+define(["Crafty", "Components/DestroyOffstage"], function(Crafty) {
     describe("A DestroyOffstage component", function() {
         
         beforeEach(function() {

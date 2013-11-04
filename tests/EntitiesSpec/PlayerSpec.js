@@ -1,3 +1,3 @@
-define(["crafty", "Entities/Player"], function(Crafty) {
+define(["Crafty", "Entities/Player"], function(Crafty) {
     
 });

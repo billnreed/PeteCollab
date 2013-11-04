@@ -1,4 +1,4 @@
-define(["crafty", "Spawners/PlatformSpawner"], function(Crafty) {
+define(["Crafty", "Spawners/PlatformSpawner"], function(Crafty) {
     describe("A PlatformSpawner", function() {
         
     });
