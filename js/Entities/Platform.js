@@ -1,4 +1,4 @@
-define(["crafty", "Components/MovesStraight", "Components/DestroyOffstage"], function(Crafty) {
+define(["crafty", "Components/MovesStraightAtTarget", "Components/DestroyOffstage"], function(Crafty) {
     Crafty.c("Platform", {
         _initialX: 0,
         _initialY: 0,
@@ -13,7 +13,7 @@ define(["crafty", "Components/MovesStraight", "Components/DestroyOffstage"], fun
             this._width = width;
             this._height = height;
             
-            this.requires("2D, Canvas, Color, MovesStraight, DestroyOffstage")
+            this.requires("2D, Canvas, Color, MovesStraightAtTarget, DestroyOffstage")
                 .attr({x: this._initialX, y: this._initialY, w: this._width, h: this._height})
                 .color("#5d5447")
                 .movesStraight(-1000, this._initialY, speed);

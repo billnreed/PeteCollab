@@ -1,5 +1,5 @@
-define(["crafty", "Components/MovesStraight"], function(Crafty) {
-    describe("A MovesStraight component", function() {
+define(["crafty", "Components/MovesStraightAtTarget"], function(Crafty) {
+    describe("A MovesStraightAtTarget component", function() {
         describe("moving right", function() {
             var ms;
             
@@ -9,7 +9,7 @@ define(["crafty", "Components/MovesStraight"], function(Crafty) {
                 var targetX = 10;
                 var targetY = 0;
                 var speed = 2;
-                ms = Crafty.e("MovesStraight")
+                ms = Crafty.e("MovesStraightAtTarget")
                     .attr({x: sourceX, y: sourceY})
                     .movesStraight(targetX, targetY, speed);
             });
