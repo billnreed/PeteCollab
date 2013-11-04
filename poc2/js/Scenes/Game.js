@@ -20,6 +20,6 @@ define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal"], functio
         Crafty.e("Goal")
             .goal(550, 0);
         
-//        Crafty.viewport.follow(player);
+        Crafty.viewport.follow(player);
     });
 });
