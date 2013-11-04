@@ -9,6 +9,8 @@ define(["Crafty"], function(Crafty) {
                 .twoway(3, 6)
                 .gravity("Platform")
                 .bind("KeyDown", this._handleInput);
+            
+            return this;
         },
         
         _handleInput: function(keyEvent) {
