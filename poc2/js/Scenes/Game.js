@@ -1,4 +1,4 @@
-define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal", "Entities/SpeedToken"], function(Crafty) {
+define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal", "Entities/SpeedToken", "HUD/HUD"], function(Crafty) {
     Crafty.scene("Game", function() {
         var backgroundColor = "#1b1a1c";
         
@@ -11,19 +11,30 @@ define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal", "Entitie
         Crafty.e("2D, Canvas")
             .attr({x: 0, y:400, w: 50, h:50});
         
+        //floor
         Crafty.e("Floor")
             .floor(0, 200, 700, 20);
         Crafty.e("Floor")
-            .floor(800, 400, 600, 20);
+            .floor(800, 300, 600, 20);
         
+        //tokens
         Crafty.e("SpeedToken")
             .speedToken(200, 0);
+        Crafty.e("SpeedToken")
+            .speedToken(300, 0);
+        Crafty.e("SpeedToken")
+            .speedToken(400, 0);
         
+        //player
         var player = Crafty.e("Player")
             .player(100, 0);
         
+        //goal
         Crafty.e("Goal")
             .goal(1300, 0);
+        
+        //hud
+        Crafty.e("HUD");
         
         Crafty.viewport.follow(player);
     });

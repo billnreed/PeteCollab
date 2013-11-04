@@ -9,7 +9,6 @@ define(["Crafty", "Entities/LevelOverMenu"], function(Crafty) {
                 .attr({x: x, y: y, w: this._width, h: this._height})
                 .color(this._goalColor)
                 .gravity("Floor")
-                .collision()
                 .onHit("Player", function() {
                     Crafty.e("LevelOverMenu")
                         .levelOverMenu(1000, 200);
