@@ -19,7 +19,7 @@
                 }
             }); 
  
-            require([], function() {
+            require(["components-spec/moves-straight-spec"], function() {
                 jasmine.getEnv().addReporter(new jasmine.HtmlReporter());
                     
                 jasmine.getEnv().execute();
