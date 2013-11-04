@@ -6,7 +6,7 @@ define(["Crafty"], function(Crafty) {
         
         player: function(playerX, playerY) {
             this.requires("2D, Canvas, Color, Gravity, Twoway")
-                .attr({x: 100, y: 100, w: 30, h: 30})
+                .attr({x: playerX, y: playerY, w: 30, h: 30})
                 .color(this._playerColor)
                 .gravity("Floor")
                 .twoway(3, 0)
