@@ -1,23 +1,36 @@
-define(["Crafty", "Spawners/PlatformSpawner", "Entities/Player", "Entities/Bullet"], function(Crafty) {
+define(["Crafty"], function() {
     Crafty.scene("Game", function() {
-        Crafty.background("#73a6e2");
+        var backgroundColor = "#1b1a1c";
+        var floorColor = "#5c7170";
+        var playerColor = "#19f2e8";
+        var goalColor = "#f2d119";
         
-        Crafty.e("PlatformSpawner")
-            .platformSpawner();
+        Crafty.background(backgroundColor);
         
-        var player = Crafty.e("Player").player();
+        Crafty.e("Ground, 2D, Canvas, Color")
+            .attr({x: 0, y: 400, w: 700, h: 20})
+            .color(floorColor);
         
-//        Crafty.viewport.bounds = {
-//            min: {
-//                x: STAGE_BOUNDS.x,
-//                y: STAGE_BOUNDS.y
-//            }, 
-//            max: {
-//                x: STAGE_BOUNDS.w,
-//                y: STAGE_BOUNDS.h
-//            }
-//        };
-//        Crafty.viewport.init(450, 350);
-//        Crafty.viewport.follow(player, 0, 0);
+        Crafty.e("Player, 2D, Canvas, Color, Gravity, Twoway")
+            .attr({x: 20, y: 0, w: 30, h: 30})
+            .color(playerColor)
+            .gravity("Ground")
+            .twoway(3, 0);
+        
+        Crafty.e("Goal, 2D, Canvas, Color, Gravity, Collision")
+            .attr({x: 640, y: 0, w: 50, h: 50})
+            .color(goalColor)
+            .gravity("Ground")
+            .collision()
+            .onHit("Player", function() {
+                Crafty.e("2D, DOM, Color, Text")
+                    .attr({x: 350, y: 225,})
+                    .text("Winner")
+                    .textColor(goalColor, 1)
+                    .textFont({
+                        size: '48px',
+                        weight: 'bold'
+                    });
+            });
     });
 });
