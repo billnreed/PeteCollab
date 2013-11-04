@@ -1,4 +1,4 @@
-define(["Crafty"], function() {
+define(["Crafty", "Entities/Player"], function(Crafty) {
     Crafty.scene("Game", function() {
         var backgroundColor = "#1b1a1c";
         var floorColor = "#5c7170";
@@ -7,20 +7,17 @@ define(["Crafty"], function() {
         
         Crafty.background(backgroundColor);
         
-        Crafty.e("Ground, 2D, Canvas, Color")
+        Crafty.e("Floor, 2D, Canvas, Color")
             .attr({x: 0, y: 400, w: 700, h: 20})
             .color(floorColor);
         
-        Crafty.e("Player, 2D, Canvas, Color, Gravity, Twoway")
-            .attr({x: 20, y: 0, w: 30, h: 30})
-            .color(playerColor)
-            .gravity("Ground")
-            .twoway(3, 0);
+        Crafty.e("Player")
+            .player(20, 0);
         
         Crafty.e("Goal, 2D, Canvas, Color, Gravity, Collision")
             .attr({x: 640, y: 0, w: 50, h: 50})
             .color(goalColor)
-            .gravity("Ground")
+            .gravity("Floor")
             .collision()
             .onHit("Player", function() {
                 Crafty.e("2D, DOM, Color, Text")
