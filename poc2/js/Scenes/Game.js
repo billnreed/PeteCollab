@@ -19,11 +19,17 @@ define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal", "Entitie
         
         //tokens
         Crafty.e("SpeedToken")
-            .speedToken(200, 0);
+            .speedToken(200, 180);
         Crafty.e("SpeedToken")
-            .speedToken(300, 0);
+            .speedToken(300, 180);
         Crafty.e("SpeedToken")
-            .speedToken(400, 0);
+            .speedToken(400, 180);
+        Crafty.e("SpeedToken")
+            .speedToken(500, 180);
+        Crafty.e("SpeedToken")
+            .speedToken(600, 180);
+        Crafty.e("SpeedToken")
+            .speedToken(700, 180);
         
         //player
         var player = Crafty.e("Player")
