@@ -1,4 +1,4 @@
-define(["crafty", "Components/MovesStraight"], function() {
+define(["crafty", "Components/MovesStraight"], function(Crafty) {
     Crafty.c("Platform", {
         _initialX: 0,
         _initialY: 0,
