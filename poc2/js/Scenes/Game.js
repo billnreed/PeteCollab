@@ -1,4 +1,4 @@
-define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal"], function(Crafty) {
+define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal", "Entities/SpeedToken"], function(Crafty) {
     Crafty.scene("Game", function() {
         var backgroundColor = "#1b1a1c";
         
@@ -15,6 +15,9 @@ define(["Crafty", "Entities/Player", "Entities/Floor", "Entities/Goal"], functio
             .floor(0, 200, 700, 20);
         Crafty.e("Floor")
             .floor(800, 400, 600, 20);
+        
+        Crafty.e("SpeedToken")
+            .speedToken(200, 0);
         
         var player = Crafty.e("Player")
             .player(100, 0);
