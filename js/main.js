@@ -4,6 +4,8 @@ require.config({
     }
 });
 
+STAGE_BOUNDS = {x: 0, y: 0, w: 450, h: 700};
+
 require(["crafty", "scenes/Game"], function(Crafty) {
     Crafty.init(450, 700);
     
