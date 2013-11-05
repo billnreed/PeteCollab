@@ -11,7 +11,7 @@ define(["Crafty"], function(Crafty) {
         },
         
         moveOut: function() {
-            this.tween({y: 0 - STAGE_BOUNDS.h}, 50);
+            this.tween({y: 0 - STAGE_BOUNDS.h / 2}, 50);
         }
     });
 });
