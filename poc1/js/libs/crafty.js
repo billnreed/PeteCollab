@@ -209,6 +209,17 @@
             this.trigger("NewEntityName", entityName);
             return this;
         },
+        
+        run: function(callback, context) {
+            var thisValue = this;
+            
+            if (typeof context != "undefined")
+                thisValue = context;
+            
+            callback.call(thisValue);
+            
+            return this;
+        },
 
         /**@
         * #.addComponent
