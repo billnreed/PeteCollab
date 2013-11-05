@@ -8,10 +8,14 @@ define(["Crafty"], function(Crafty) {
         
         reveal: function(amount) {
             this.tween({y: this.y - amount}, 50);
+            
+            return this;
         },
         
         moveOut: function() {
             this.tween({y: 0 - STAGE_BOUNDS.h / 2}, 50);
+            
+            return this;
         }
     });
 });
