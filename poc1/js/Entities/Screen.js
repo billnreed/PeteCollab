@@ -3,7 +3,6 @@ define(["Crafty"], function(Crafty) {
         up: "-",
         down: "+"
     };
-
     
     Crafty.c("Screen", {
         _directionOperations: {
@@ -56,8 +55,6 @@ define(["Crafty"], function(Crafty) {
                     y: STAGE_BOUNDS.h
                 }, 50);
             }
-            
-//            this.tween({y: STAGE_BOUNDS.h}, 50);
             
             return this;
         }

@@ -9,7 +9,9 @@ define(["Crafty"], function(Crafty) {
         
         _checkForHit: function() {
             if (!this._hasHit && this.hit("Player")) {
-                Crafty.trigger("FINAL_REVEAL");
+                Crafty("Screen").each(function() {
+                    this.moveOut();
+                });
                 
                 this._hasHit = true;
             }

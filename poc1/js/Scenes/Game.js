@@ -31,16 +31,5 @@ define(["Crafty", "Entities/Screen", "Entities/Platform", "Entities/Player", "En
         topScreen.reveal(60);
         bottomScreen.reveal(60);
         
-        Crafty.bind("REVEAL", function(revealData) {
-            var amount = revealData.amount;
-            
-            topScreen.reveal(amount);
-            bottomScreen.reveal(amount);
-        });
-        
-        Crafty.bind("FINAL_REVEAL", function() {
-            topScreen.moveOut();
-            bottomScreen.moveOut();
-        });
     });
 });
