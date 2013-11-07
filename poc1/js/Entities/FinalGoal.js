@@ -1,10 +1,15 @@
-define(["Crafty"], function(Crafty) {
+define(["Crafty", "Entities/Goal"], function(Crafty) {
     Crafty.c("FinalGoal", {
         _hasHit: false,
 
         init: function() {
-            this.requires("Collision")
-                .bind("EnterFrame", this._checkForHit)
+            
+        },
+
+        finalGoal: function(x, y, revealAmount) {
+            this.requires("Goal, Collision")
+                .goal(x, y, revealAmount)
+                .bind("EnterFrame", this._checkForHit);
         },        
         
         _checkForHit: function() {

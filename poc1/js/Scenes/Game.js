@@ -21,8 +21,8 @@ define(["Crafty", "Entities/Screen", "Entities/Platform", "Entities/Player", "En
             .goal(30, 185, 50);
         Crafty.e("Goal")
             .goal(200, 135, 60);
-        Crafty.e("Goal, FinalGoal")
-            .goal(240, 485, 80);
+        Crafty.e("FinalGoal")
+            .finalGoal(240, 485, 80);
         
         var topScreen = Crafty.e("Screen")
             .screen(directions.up);
@@ -30,6 +30,5 @@ define(["Crafty", "Entities/Screen", "Entities/Platform", "Entities/Player", "En
             .screen(directions.down);
         topScreen.reveal(60);
         bottomScreen.reveal(60);
-        
     });
 });
