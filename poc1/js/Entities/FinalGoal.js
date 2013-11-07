@@ -2,17 +2,13 @@ define(["Crafty", "Entities/Goal"], function(Crafty) {
     Crafty.c("FinalGoal", {
         _hasHit: false,
 
-        init: function() {
-            
-        },
-
         finalGoal: function(x, y, revealAmount) {
             this.requires("Goal, Collision")
                 .goal(x, y, revealAmount)
-                .bind("EnterFrame", this._checkForHit);
         },        
         
-        _checkForHit: function() {
+        //override Goal._onHit
+        _onHit: function() {
             if (!this._hasHit && this.hit("Player")) {
                 Crafty("Screen").each(function() {
                     this.moveOut();
