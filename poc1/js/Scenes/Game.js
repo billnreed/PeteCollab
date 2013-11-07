@@ -1,4 +1,4 @@
-define(["Crafty", "Entities/Platform", "Entities/Player", "Entities/TopScreen", "Entities/BottomScreen", "Entities/Goal", "Entities/FinalGoal"], function(Crafty) {
+define(["Crafty", "Entities/Screen", "Entities/Platform", "Entities/Player", "Entities/Goal", "Entities/FinalGoal"], function(Crafty, directions) {
     Crafty.scene("Game", function() {
         Crafty.background("#0dd0ff");
         
@@ -24,8 +24,10 @@ define(["Crafty", "Entities/Platform", "Entities/Player", "Entities/TopScreen", 
         Crafty.e("Goal, FinalGoal")
             .goal(240, 485, 80);
         
-        var topScreen = Crafty.e("TopScreen");
-        var bottomScreen = Crafty.e("BottomScreen");
+        var topScreen = Crafty.e("Screen")
+            .screen(directions.up);
+        var bottomScreen = Crafty.e("Screen")
+            .screen(directions.down);
         topScreen.reveal(60);
         bottomScreen.reveal(60);
         
