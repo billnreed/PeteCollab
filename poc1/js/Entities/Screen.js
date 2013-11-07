@@ -41,11 +41,9 @@ define(["Crafty"], function(Crafty) {
             this.tween({
                 y: this._directionOperations[this._directionOperator](this.y, amount)
             }, 50);
-                        
-            return this;
         },
         
-        moveOut: function() {
+        moveOffScreen: function() {
             if (this._directionOperator === screenDirections.up) {
                 this.tween({
                     y: 0 - STAGE_BOUNDS.h / 2

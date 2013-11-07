@@ -11,7 +11,7 @@ define(["Crafty", "Entities/Goal"], function(Crafty) {
         _onHit: function() {
             if (!this._hasHit && this.hit("Player")) {
                 Crafty("Screen").each(function() {
-                    this.moveOut();
+                    this.moveOffScreen();
                 });
                 
                 this._hasHit = true;
