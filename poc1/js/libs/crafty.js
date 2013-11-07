@@ -209,29 +209,6 @@
             this.trigger("NewEntityName", entityName);
             return this;
         },
-        
-        /**@
-        * #.run
-        * @comp Crafty Core
-        * @sign public this .run(callback, context)
-        * @param callback - The function to run
-        * @param context - The this value for the function to run with
-        *
-        * @example
-        * ~~~
-        * this.tween({x: 50}).run(function() {//some stuff}).tween({x:10});
-        * ~~~
-        */
-        run: function(callback, context) {
-            var thisValue = this;
-            
-            if (typeof context != "undefined")
-                thisValue = context;
-            
-            callback.call(thisValue);
-            
-            return this;
-        },
 
         /**@
         * #.addComponent
