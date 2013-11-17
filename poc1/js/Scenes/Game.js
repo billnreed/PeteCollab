@@ -1,23 +1,5 @@
-define(["Crafty", "Entities/Screen", "Entities/Platform", "Entities/Player", "Entities/Goal", "Entities/FinalGoal"], function(Crafty, directions) {
-    var levelData = {
-        player: {x: 100, y: 260},
-        platforms: [
-            {x: 30, y: 150, width: 200, height: 10},
-            {x: 20, y: 200, width: 30, height: 10},
-            {x: 20, y: 250, width: 40, height: 10},
-            {x: 50, y: 300, width: 70, height: 10},
-            {x: 230, y: 500, width: 30, height: 10}
-        ],
-        goals: [
-            {x: 60, y: 285, revealAmount: 50},
-            {x: 30, y: 185, revealAmount: 50},
-            {x: 200, y: 135, revealAmount: 60}
-        ],
-        finalGoal: {x: 240, y: 485},
-        topScreen: {direction: directions.up},
-        bottomScreen: {direction: directions.down},
-        initialRevealAmount: 60
-    };
+define(["Crafty", "Levels/Level1", "Entities/Screen", "Entities/Platform", "Entities/Player", "Entities/Goal", "Entities/FinalGoal"], function(Crafty, level1, directions) {
+    var levelData = level1;
     
     Crafty.scene("Game", function() {
         Crafty.background("#0dd0ff");

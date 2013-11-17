@@ -1,9 +1,4 @@
-define(["Crafty"], function(Crafty) {
-    var screenDirections = {
-        up: "-",
-        down: "+"
-    };
-    
+define(["Crafty", "Directions"], function(Crafty, screenDirections) {
     Crafty.c("Screen", {
         _directionOperations: {
             "-": function(value1, value2) {
